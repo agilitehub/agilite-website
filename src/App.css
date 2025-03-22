@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+/* Remove any lines or borders at the top of the page */
+body::before {
+  display: none !important;
+}
+
+body, #root, nav, header {
+  border-top: none !important;
+  outline: none !important;
+}
+
+/* Override any hr or divider elements */
+hr, .divider {
+  display: none !important;
+}
