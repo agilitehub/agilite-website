@@ -137,6 +137,11 @@ module.exports = {
       backgroundImage: {
         'stripes-light': "repeating-linear-gradient(45deg, rgba(227, 6, 19, 0.03), rgba(227, 6, 19, 0.03) 12px, transparent 12px, transparent 24px)",
       },
+      boxShadow: {
+        'glow-sm': '0 0 15px rgba(227, 6, 19, 0.3)',
+        'glow-md': '0 0 25px rgba(227, 6, 19, 0.2), 0 0 15px rgba(227, 6, 19, 0.1)',
+        'glow-lg': '0 0 35px rgba(227, 6, 19, 0.3), 0 0 20px rgba(227, 6, 19, 0.2)',
+      },
     },
   },
   plugins: [],
