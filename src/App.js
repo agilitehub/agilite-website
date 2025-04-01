@@ -11,6 +11,9 @@ import Contact from './components/layout/Contact';
 import Footer from './components/layout/Footer';
 import ChangelogPage from './pages/ChangelogPage';
 import RoadmapPage from './pages/RoadmapPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import ForgotPasswordPage from './pages/ForgotPasswordPage';
 import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
 
@@ -60,6 +63,9 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/changelog" element={<ChangelogPage />} />
           <Route path="/roadmap" element={<RoadmapPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         </Routes>
       </Router>
     </ThemeProvider>

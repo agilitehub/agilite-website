@@ -51,7 +51,8 @@ module.exports = {
         'float-2': 'float-2 12s ease-in-out infinite',
         'float-3': 'float-3 10s ease-in-out infinite',
         'ping-slow': 'ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite',
-        'fade-in': 'fade-in 1s ease-out forwards'
+        'fade-in': 'fade-in 1s ease-out forwards',
+        'gradient-shift': 'gradient-shift 3s ease infinite',
       },
       keyframes: {
         'float': {
@@ -87,8 +88,14 @@ module.exports = {
           '100%': { transform: 'translateX(50px) translateY(50px)' }
         },
         'glow': {
-          '0%, 100%': { opacity: 0.5, transform: 'scale(1)' },
-          '50%': { opacity: 1, transform: 'scale(1.1)' }
+          '0%, 100%': {
+            'box-shadow': '0 0 50px rgba(227, 6, 19, 0.4), 0 0 100px rgba(227, 6, 19, 0.2), 0 0 150px rgba(227, 6, 19, 0.1)',
+            'transform': 'scale(1)'
+          },
+          '50%': {
+            'box-shadow': '0 0 70px rgba(227, 6, 19, 0.5), 0 0 120px rgba(227, 6, 19, 0.3), 0 0 180px rgba(227, 6, 19, 0.2)',
+            'transform': 'scale(1.01)'
+          }
         },
         'float-1': {
           '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
@@ -111,7 +118,17 @@ module.exports = {
         'fade-in': {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 }
-        }
+        },
+        'gradient-shift': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
+        },
       },
       container: {
         center: true,

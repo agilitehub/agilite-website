@@ -79,14 +79,12 @@ const Navbar = () => {
             Contact
             <span className={navLinkBarClasses}></span>
           </Link>
-          <a 
-            href="https://agilite.io" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <Link 
+            to="/login"
             className="ml-4 px-5 py-2 bg-agilite-red hover:bg-agilite-red/90 text-white rounded-lg transition-all duration-300 font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5"
           >
             Login
-          </a>
+          </Link>
           <ThemeToggle className="ml-4" />
         </div>
         
@@ -107,7 +105,7 @@ const Navbar = () => {
         className={`
           lg:hidden absolute top-full left-0 w-full bg-gradient-to-b from-white via-white to-agilite-red/5 dark:from-gray-900 dark:via-gray-900 dark:to-agilite-red/10 shadow-lg border-b-2 border-agilite-red/20 dark:border-agilite-red/30
           transition-all duration-300 transform overflow-hidden
-          ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}
+          ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}
         `}
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
@@ -167,15 +165,13 @@ const Navbar = () => {
             Contact
             <span className={navLinkBarClasses}></span>
           </Link>
-          <a 
-            href="https://agilite.io" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <Link 
+            to="/login"
             className="px-5 py-2 bg-agilite-red hover:bg-agilite-red/90 text-white rounded-lg transition-all duration-300 font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5 w-fit"
             onClick={() => setIsOpen(false)}
           >
             Login
-          </a>
+          </Link>
         </div>
       </div>
     </nav>
