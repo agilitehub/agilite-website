@@ -33,6 +33,9 @@ module.exports = {
         heading: ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
+        'float': 'float 8s ease-in-out infinite',
+        'float-delayed': 'float 8s ease-in-out infinite 4s',
+        'spin-slow': 'spin 20s linear infinite',
         'slow-pulse': 'slow-pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'slow-pulse-delay': 'slow-pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite 4s',
         'slow-float': 'slow-float 15s ease-in-out infinite',
@@ -51,6 +54,10 @@ module.exports = {
         'fade-in': 'fade-in 1s ease-out forwards'
       },
       keyframes: {
+        'float': {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '50%': { transform: 'translate(20px, -20px) scale(1.1)' }
+        },
         'slow-pulse': {
           '0%, 100%': { opacity: 1, transform: 'scale(1)' },
           '50%': { opacity: 0.8, transform: 'scale(1.1)' },

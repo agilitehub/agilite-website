@@ -59,10 +59,10 @@ const Hero = () => {
       <div className="container relative z-10">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white mb-6 leading-tight">
-            Simplifying Complex <span className="text-agilite-red">Integrations</span>
+            Empowering <span className="text-agilite-red">Agile</span> Integration Solutions
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mb-10">
-            Low-code, agile integration solutions for businesses of all sizes. Connect your systems and automate workflows with ease.
+            A microservice-first platform designed by developers, for developers. Streamline your workflows with our comprehensive suite of integration tools.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#contact" className="relative group bg-agilite-red hover:bg-red-700 text-white font-bold py-3 px-8 rounded-md shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 overflow-hidden">

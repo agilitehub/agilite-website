@@ -2,11 +2,11 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faCode, 
-  faCloudArrowUp, 
   faGears, 
-  faArrowsToCircle,
   faCircleNodes,
-  faNetworkWired
+  faNetworkWired,
+  faShieldAlt,
+  faRocket
 } from '@fortawesome/free-solid-svg-icons';
 
 const ServiceCard = ({ icon, title, description, index }) => {
@@ -42,32 +42,32 @@ const Services = () => {
     {
       icon: faCircleNodes,
       title: 'Integration Platform',
-      description: 'Connect systems, applications, and data sources. Simplify complex interactions and automate business processes.'
-    },
-    {
-      icon: faCode,
-      title: 'API Development',
-      description: 'Create robust, scalable APIs that connect your business systems and enable seamless data exchange.'
-    },
-    {
-      icon: faCloudArrowUp,
-      title: 'Cloud Solutions',
-      description: 'Leverage cloud technologies for enhanced performance, scalability, and cost-efficiency in your business.'
+      description: 'A microservice-first platform that centralizes all your integration needs. Access and manage all configurations through a unified API.'
     },
     {
       icon: faNetworkWired,
-      title: 'Middleware Development',
-      description: 'Custom middleware solutions to bridge legacy systems with modern applications for seamless operations.'
+      title: 'Node-RED Integration',
+      description: 'Seamlessly integrate with Node-RED for flow-based programming. Chain multiple services and create dynamic workflows with ease.'
+    },
+    {
+      icon: faShieldAlt,
+      title: 'Enterprise Security',
+      description: 'Built with security-first approach, featuring robust encryption, role-based access controls, and comprehensive audit logging.'
+    },
+    {
+      icon: faCode,
+      title: 'API-First Design',
+      description: 'Access all features through well-documented REST APIs. Our microservices architecture ensures flexible, scalable integrations.'
     },
     {
       icon: faGears,
-      title: 'System Integration',
-      description: 'Connect disparate systems to enable smooth data flow and unified business processes across your organization.'
+      title: 'Comprehensive Modules',
+      description: 'From API Keys to BPM, our modular architecture provides a complete suite of tools for every integration need.'
     },
     {
-      icon: faArrowsToCircle,
-      title: 'Digital Transformation',
-      description: "Guide your organization's transition to digital business models and technology-driven operations."
+      icon: faRocket,
+      title: 'Rapid Implementation',
+      description: 'Deploy integrations in days, not months. Our platform accelerates your path to digital transformation with minimal coding required.'
     }
   ];
 
@@ -77,8 +77,14 @@ const Services = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Our Services</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Agilit-e provides integration services that connect your business systems and streamline operations.
+            Agilit-e provides a comprehensive suite of integration services designed by developers, for developers. Our platform combines power and simplicity to solve your most complex integration challenges.
           </p>
+          <a 
+            href="#modules" 
+            className="inline-block mt-6 text-agilite-red hover:text-red-700 font-semibold transition-colors duration-300"
+          >
+            Explore Our Modules →
+          </a>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

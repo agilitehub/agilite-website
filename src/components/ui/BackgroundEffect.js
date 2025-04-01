@@ -3,40 +3,51 @@ import React from 'react';
 const BackgroundEffect = ({ className = '' }) => {
   return (
     <div className={`absolute inset-0 overflow-hidden z-0 ${className}`}>
-      {/* Base gradient background - enhanced for light mode */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-pink-50/60 dark:from-gray-900 dark:via-agilite-red/15 dark:to-agilite-black"></div>
+      {/* Base gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900"></div>
       
-      {/* Light mode dynamic elements - with dark red colors */}
+      {/* Light mode dynamic elements */}
       <div className="absolute inset-0 block dark:hidden">
-        {/* Dark red circle accent */}
-        <div className="absolute top-[25%] left-[8%] w-[250px] h-[250px] rounded-full bg-gradient-to-tr from-red-900/20 via-agilite-red/15 to-transparent"></div>
+        {/* Main vibrant gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-agilite-red/[0.25] via-transparent to-agilite-red/[0.25]"></div>
         
-        {/* Bottom accent with dark red */}
-        <div className="absolute bottom-0 left-0 w-[70%] h-[4px] bg-gradient-to-r from-red-900/70 via-agilite-red to-transparent"></div>
+        {/* Animated floating elements */}
+        <div className="absolute top-1/4 right-1/4 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,agilite-red/[0.3]_0%,transparent_70%)] animate-float"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-[700px] h-[700px] bg-[radial-gradient(circle_at_center,agilite-red/[0.3]_0%,transparent_70%)] animate-float-delayed"></div>
         
-        {/* Light geometric shape with dark red */}
-        <div className="absolute left-0 bottom-0 w-[400px] h-[400px] bg-gradient-to-tr from-red-800/30 via-agilite-red/15 to-transparent"></div>
+        {/* Diagonal accent lines */}
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,agilite-red/[0.2]_1px,transparent_1px),linear-gradient(-45deg,agilite-red/[0.2]_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
         
-        {/* Additional dark red accent */}
-        <div className="absolute bottom-[20%] right-[15%] w-[200px] h-[200px] rounded-full bg-gradient-to-bl from-red-900/25 via-agilite-red/15 to-transparent blur-xl"></div>
+        {/* Corner accents */}
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-agilite-red/[0.3] via-transparent to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-tl from-agilite-red/[0.3] via-transparent to-transparent"></div>
         
-        {/* New dark red element */}
-        <div className="absolute top-[60%] right-[30%] w-[180px] h-[180px] rounded-full bg-gradient-to-tr from-red-800/20 via-agilite-red/15 to-transparent blur-lg"></div>
+        {/* Center glow effect */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[radial-gradient(circle_at_center,agilite-red/[0.25]_0%,transparent_70%)] animate-pulse-slow"></div>
+        
+        {/* Additional accent elements */}
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_center,agilite-red/[0.2]_0%,transparent_70%)] animate-float-slow"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_center,agilite-red/[0.2]_0%,transparent_70%)] animate-float-slow-delayed"></div>
       </div>
       
-      {/* Dark mode dynamic elements - updated with more dark red */}
+      {/* Dark mode dynamic elements */}
       <div className="absolute inset-0 hidden dark:block">
-        {/* Wave pattern top */}
-        <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-red-900/40 to-transparent rounded-br-[70%] rounded-bl-[30%]"></div>
+        {/* Main vibrant gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-agilite-red/[0.25] via-transparent to-agilite-red/[0.25]"></div>
         
-        {/* Curved diagonal accent */}
-        <div className="absolute right-0 top-[30%] h-[300px] w-[300px] bg-red-900/40 rounded-full blur-xl"></div>
+        {/* Animated floating elements */}
+        <div className="absolute top-1/4 right-1/4 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,agilite-red/[0.3]_0%,transparent_70%)] animate-float"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,agilite-red/[0.3]_0%,transparent_70%)] animate-float-delayed"></div>
         
-        {/* Bottom wave pattern */}
-        <div className="absolute bottom-0 inset-x-0 h-64 bg-gradient-to-t from-agilite-slate/20 via-red-900/35 to-transparent rounded-tr-[50%] rounded-tl-[70%]"></div>
+        {/* Diagonal accent lines */}
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,agilite-red/[0.2]_1px,transparent_1px),linear-gradient(-45deg,agilite-red/[0.2]_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
         
-        {/* Abstract shape */}
-        <div className="absolute left-[20%] top-[25%] w-48 h-48 bg-red-900/35 rounded-tl-[80px] rounded-br-[80px] transform rotate-12 blur-md"></div>
+        {/* Corner accents */}
+        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-agilite-red/[0.3] via-transparent to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-tl from-agilite-red/[0.3] via-transparent to-transparent"></div>
+        
+        {/* Center glow effect */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle_at_center,agilite-red/[0.25]_0%,transparent_70%)] animate-pulse-slow"></div>
       </div>
     </div>
   );

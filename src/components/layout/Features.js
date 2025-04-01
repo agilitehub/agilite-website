@@ -4,7 +4,11 @@ import {
   faCode, 
   faBolt, 
   faLock, 
-  faChartLine 
+  faChartLine,
+  faDatabase,
+  faNetworkWired,
+  faShieldAlt,
+  faCogs
 } from '@fortawesome/free-solid-svg-icons';
 import BackgroundEffect from '../ui/BackgroundEffect';
 
@@ -26,24 +30,44 @@ const FeatureCard = ({ icon, title, description }) => {
 const Features = () => {
   const features = [
     {
+      icon: faDatabase,
+      title: 'Central Profile Store',
+      description: 'All module profiles stored in a central location, accessible via API with proper authentication. Streamline your configuration management.'
+    },
+    {
+      icon: faNetworkWired,
+      title: 'Node-RED Integration',
+      description: 'Seamlessly integrate with Node-RED for flow-based programming. Chain multiple services and functions to create dynamic workflows.'
+    },
+    {
+      icon: faShieldAlt,
+      title: 'Enterprise Security',
+      description: 'Built with security-first approach, featuring robust encryption, role-based access controls, and comprehensive audit logging.'
+    },
+    {
+      icon: faCogs,
+      title: 'Comprehensive Modules',
+      description: 'From API Keys to BPM, our modular architecture provides a complete suite of tools for every integration need.'
+    },
+    {
       icon: faCode,
-      title: 'Low-Code Solution',
-      description: 'Build complex integrations with minimal coding. Our visual interface makes it easy for business users to create powerful workflows.'
+      title: 'Developer-First',
+      description: 'Developed by developers, for developers. Eliminate repetitive work with our accumulated experience from 300+ projects.'
     },
     {
       icon: faBolt,
-      title: 'Rapid Implementation',
-      description: 'Deploy integrations in days, not months. Agilit-e\'s modular approach accelerates your path to digital transformation.'
-    },
-    {
-      icon: faLock,
-      title: 'Enterprise Security',
-      description: 'Built with security in mind, featuring robust encryption, role-based access controls, and comprehensive audit logging.'
+      title: 'Continuous Innovation',
+      description: 'Regular updates and improvements through our microservices architecture. Stay ahead with the latest features and optimizations.'
     },
     {
       icon: faChartLine,
-      title: 'Scalable Architecture',
-      description: 'Our microservices-based platform scales with your business needs, from small departments to enterprise-wide deployments.'
+      title: 'Performance Optimized',
+      description: 'Built for speed and scalability. Our platform is designed to handle enterprise workloads with optimal performance.'
+    },
+    {
+      icon: faLock,
+      title: 'API-First Design',
+      description: 'Microservice-first solution with comprehensive API support. Access all features through well-documented REST APIs.'
     }
   ];
 
@@ -57,7 +81,7 @@ const Features = () => {
             Why Choose Agilit-e
           </h2>
           <p className="text-xl text-agilite-slate/90 dark:text-gray-300 max-w-3xl mx-auto">
-            Our platform combines power and simplicity to solve your most complex integration challenges.
+            A comprehensive platform that combines power, flexibility, and security to solve your most complex integration challenges.
           </p>
         </div>
 
