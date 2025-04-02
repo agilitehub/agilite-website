@@ -53,6 +53,8 @@ module.exports = {
         'ping-slow': 'ping-slow 3s cubic-bezier(0, 0, 0.2, 1) infinite',
         'fade-in': 'fade-in 1s ease-out forwards',
         'gradient-shift': 'gradient-shift 3s ease infinite',
+        'dash-slow': 'dash 15s linear infinite',
+        'dash-slow-reverse': 'dash-reverse 15s linear infinite',
       },
       keyframes: {
         'float': {
@@ -128,6 +130,14 @@ module.exports = {
             'background-size': '200% 200%',
             'background-position': 'right center'
           }
+        },
+        'dash': {
+          '0%': { 'stroke-dashoffset': 0 },
+          '100%': { 'stroke-dashoffset': 100 }
+        },
+        'dash-reverse': {
+          '0%': { 'stroke-dashoffset': 0 },
+          '100%': { 'stroke-dashoffset': -100 }
         },
       },
       container: {

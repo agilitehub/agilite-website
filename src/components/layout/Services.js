@@ -11,40 +11,34 @@ import {
 
 const ServiceCard = ({ icon, title, description, index }) => {
   return (
-    <div className="relative group transform transition-all duration-300 hover:-translate-y-2">
-      {/* Outer glow effect */}
-      <div className="absolute inset-0 bg-agilite-red/20 rounded-xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-      
-      {/* Middle glow layer */}
-      <div className="absolute inset-0 bg-agilite-red/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    <div className="relative group transform transition-transform duration-300 hover:-translate-y-2">
+      {/* Background gradient with optimized animation */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-xl transform transition-opacity duration-300 group-hover:opacity-100 opacity-0"></div>
       
       {/* Main card */}
-      <div className="relative bg-white dark:bg-gray-900 p-8 rounded-xl shadow-[0_4px_20px_rgba(227,6,19,0.15)] hover:shadow-[0_8px_40px_rgba(227,6,19,0.3)] transition-all duration-300 border border-gray-100 dark:border-gray-800 overflow-hidden">
-        {/* Animated background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-agilite-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        
-        {/* Corner accent */}
-        <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-agilite-red/20 to-transparent -translate-x-10 -translate-y-10 rounded-full blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+      <div className="relative bg-gradient-to-br from-agilite-red to-red-700 dark:from-agilite-red dark:to-red-800 p-8 rounded-xl border border-red-400/20 dark:border-red-500/20 overflow-hidden shadow-lg">
+        {/* Animated corner accent */}
+        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/20 to-transparent -translate-x-8 -translate-y-8 rounded-full blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
         
         {/* Content container */}
         <div className="relative">
-          {/* Icon container with enhanced shadow */}
-          <div className="w-16 h-16 rounded-2xl bg-white dark:bg-gray-900 shadow-[0_4px_12px_rgba(227,6,19,0.2)] flex items-center justify-center mb-6 transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-[0_8px_24px_rgba(227,6,19,0.35)]">
+          {/* Icon container */}
+          <div className="w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-6 transform transition-all duration-300 group-hover:scale-110 group-hover:bg-white/20">
             <FontAwesomeIcon 
               icon={icon} 
-              className="text-2xl text-agilite-red"
+              className="text-2xl text-white"
             />
           </div>
           
-          <h3 className="text-xl font-bold text-agilite-red mb-4 transition-colors duration-300">{title}</h3>
-          <p className="leading-relaxed bg-gradient-to-r from-gray-600 via-gray-700 to-gray-600 dark:from-gray-300 dark:via-gray-400 dark:to-gray-300 bg-clip-text text-transparent">{description}</p>
+          <h3 className="text-xl font-bold text-white mb-4 transition-colors duration-300">{title}</h3>
+          <p className="text-red-100/90 leading-relaxed">{description}</p>
         </div>
 
-        {/* Bottom accent line */}
-        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-agilite-red/40 to-transparent transform transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+        {/* Bottom highlight */}
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent transform transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
         
-        {/* Side accent line */}
-        <div className="absolute top-1/2 -right-[2px] w-[2px] h-24 bg-gradient-to-b from-transparent via-agilite-red/40 to-transparent transform -translate-y-1/2 transition-opacity duration-300 opacity-0 group-hover:opacity-100"></div>
+        {/* Side accent */}
+        <div className="absolute top-1/2 -right-1 w-2 h-20 bg-gradient-to-b from-transparent via-white/20 to-transparent transform -translate-y-1/2 transition-opacity duration-300 opacity-0 group-hover:opacity-100"></div>
       </div>
     </div>
   );

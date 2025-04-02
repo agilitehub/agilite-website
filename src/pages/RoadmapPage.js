@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Roadmap from '../components/layout/Roadmap';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 
 const RoadmapPage = () => {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       <Navbar />
@@ -20,10 +25,6 @@ const RoadmapPage = () => {
           
           {/* Bold corner accent */}
           <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-agilite-red/20 to-transparent dark:from-agilite-red/30 dark:to-transparent"></div>
-          
-          {/* Sharp geometric accent - light mode only */}
-          <div className="absolute top-1/4 right-0 w-3/4 h-1 bg-agilite-red/30 dark:bg-transparent"></div>
-          <div className="absolute top-1/4 right-0 w-1 h-32 bg-agilite-red/30 dark:bg-transparent"></div>
         </div>
         
         <div className="container relative z-10">

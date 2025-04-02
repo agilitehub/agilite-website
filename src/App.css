@@ -51,3 +51,23 @@ body, #root, nav, header {
 hr, .divider {
   display: none !important;
 }
+
+/* Remove horizontal lines between sections */
+section {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Fix for specific section separators */
+section::before,
+section::after {
+  display: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+}
+
+/* Remove horizontal accent lines in all section backgrounds */
+section .absolute.top-1\/4.right-0.w-3\/4.h-1,
+.absolute.top-1\/4.right-0.w-1.h-32 {
+  display: none !important;
+}

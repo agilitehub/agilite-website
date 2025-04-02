@@ -34,6 +34,19 @@
   nav, header, div {
     border-top: none !important;
   }
+  
+  /* Additional rules to remove section separators */
+  section {
+    border-top: none !important;
+    border-bottom: none !important;
+  }
+  
+  /* Ensure that any section content doesn't have separators */
+  section > div::before,
+  section > div::after {
+    border-top: none !important;
+    border-bottom: none !important;
+  }
 }
 
 @layer components {

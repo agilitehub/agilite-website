@@ -51,9 +51,147 @@ const Hero = () => {
         {/* Bold corner accent */}
         <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-agilite-red/20 to-transparent dark:from-agilite-red/30 dark:to-transparent"></div>
         
-        {/* Sharp geometric accent - light mode only */}
-        <div className="absolute top-1/4 right-0 w-3/4 h-1 bg-agilite-red/30 dark:bg-transparent"></div>
-        <div className="absolute top-1/4 right-0 w-1 h-32 bg-agilite-red/30 dark:bg-transparent"></div>
+        {/* Logo-inspired node clusters in black - light mode */}
+        <div className="absolute top-[25%] right-[15%] w-[240px] h-[240px] block dark:hidden animate-float-2">
+          <svg className="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            {/* Main node center */}
+            <circle cx="100" cy="100" r="8" fill="#4A545E" fillOpacity="0.5" />
+            
+            {/* Connected nodes in black - exact logo pattern */}
+            <circle cx="100" cy="30" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="130" cy="40" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="150" cy="70" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="150" cy="100" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="150" cy="130" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="130" cy="160" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="100" cy="170" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="70" cy="160" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="50" cy="130" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="50" cy="100" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="50" cy="70" r="5" fill="black" fillOpacity="0.7" />
+            <circle cx="70" cy="40" r="5" fill="black" fillOpacity="0.7" />
+            
+            {/* Connection lines */}
+            <line x1="100" y1="100" x2="100" y2="30" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="130" y2="40" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="150" y2="70" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="150" y2="100" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="150" y2="130" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="130" y2="160" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="100" y2="170" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="70" y2="160" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="50" y2="130" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="50" y2="100" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="50" y2="70" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="70" y2="40" stroke="black" strokeWidth="1" strokeOpacity="0.5" />
+          </svg>
+        </div>
+        
+        <div className="absolute bottom-[15%] left-[10%] w-[200px] h-[200px] block dark:hidden animate-float-3">
+          <svg className="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            {/* Main node center */}
+            <circle cx="100" cy="100" r="7" fill="#4A545E" fillOpacity="0.5" />
+            
+            {/* Connected nodes in black - exact logo pattern */}
+            <circle cx="100" cy="35" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="125" cy="45" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="145" cy="70" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="145" cy="100" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="145" cy="130" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="125" cy="155" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="100" cy="165" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="75" cy="155" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="55" cy="130" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="55" cy="100" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="55" cy="70" r="4" fill="black" fillOpacity="0.6" />
+            <circle cx="75" cy="45" r="4" fill="black" fillOpacity="0.6" />
+            
+            {/* Connection lines */}
+            <line x1="100" y1="100" x2="100" y2="35" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="125" y2="45" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="145" y2="70" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="145" y2="100" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="145" y2="130" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="125" y2="155" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="100" y2="165" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="75" y2="155" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="55" y2="130" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="55" y2="100" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="55" y2="70" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+            <line x1="100" y1="100" x2="75" y2="45" stroke="black" strokeWidth="0.8" strokeOpacity="0.4" />
+          </svg>
+        </div>
+        
+        {/* Logo-inspired node clusters in white - dark mode */}
+        <div className="absolute top-[25%] right-[15%] w-[240px] h-[240px] hidden dark:block animate-float-2">
+          <svg className="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            {/* Main node center */}
+            <circle cx="100" cy="100" r="8" fill="#6B7280" fillOpacity="0.7" />
+            
+            {/* Connected nodes in white - exact logo pattern */}
+            <circle cx="100" cy="30" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="130" cy="40" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="150" cy="70" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="150" cy="100" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="150" cy="130" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="130" cy="160" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="100" cy="170" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="70" cy="160" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="50" cy="130" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="50" cy="100" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="50" cy="70" r="5" fill="white" fillOpacity="0.8" />
+            <circle cx="70" cy="40" r="5" fill="white" fillOpacity="0.8" />
+            
+            {/* Connection lines */}
+            <line x1="100" y1="100" x2="100" y2="30" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="130" y2="40" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="150" y2="70" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="150" y2="100" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="150" y2="130" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="130" y2="160" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="100" y2="170" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="70" y2="160" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="50" y2="130" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="50" y2="100" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="50" y2="70" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+            <line x1="100" y1="100" x2="70" y2="40" stroke="white" strokeWidth="1" strokeOpacity="0.6" />
+          </svg>
+        </div>
+        
+        <div className="absolute bottom-[15%] left-[10%] w-[200px] h-[200px] hidden dark:block animate-float-3">
+          <svg className="w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            {/* Main node center */}
+            <circle cx="100" cy="100" r="7" fill="#6B7280" fillOpacity="0.7" />
+            
+            {/* Connected nodes in white - exact logo pattern */}
+            <circle cx="100" cy="35" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="125" cy="45" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="145" cy="70" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="145" cy="100" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="145" cy="130" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="125" cy="155" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="100" cy="165" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="75" cy="155" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="55" cy="130" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="55" cy="100" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="55" cy="70" r="4" fill="white" fillOpacity="0.7" />
+            <circle cx="75" cy="45" r="4" fill="white" fillOpacity="0.7" />
+            
+            {/* Connection lines */}
+            <line x1="100" y1="100" x2="100" y2="35" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="125" y2="45" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="145" y2="70" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="145" y2="100" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="145" y2="130" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="125" y2="155" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="100" y2="165" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="75" y2="155" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="55" y2="130" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="55" y2="100" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="55" y2="70" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+            <line x1="100" y1="100" x2="75" y2="45" stroke="white" strokeWidth="0.8" strokeOpacity="0.5" />
+          </svg>
+        </div>
       </div>
       
       <div className="container relative z-10">

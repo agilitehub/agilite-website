@@ -24,7 +24,7 @@ const Logo = ({
   return (
     <div className={`flex items-center ${className}`}>
       {/* 3D Network nodes logo */}
-      <div className={`relative ${logoSize} mr-4`} aria-hidden="true">
+      <div className={`relative ${logoSize} mr-8`} aria-hidden="true">
         {/* Shadow effect */}
         <div className="absolute bottom-[-8px] left-1/4 w-1/2 h-[3px] bg-gray-300/50 dark:bg-gray-700/50 rounded-full blur-sm"></div>
         
@@ -73,7 +73,7 @@ const Logo = ({
       
       {/* Agilit-e text */}
       {showText && (
-        <span className={`text-3xl font-normal tracking-wider ${textColor} dark:text-white`} style={{ fontFamily: 'Arial, sans-serif' }}>
+        <span className={`text-3xl font-normal tracking-wider whitespace-nowrap ${textColor} dark:text-white`} style={{ fontFamily: 'Arial, sans-serif' }}>
           AGILIT-E
         </span>
       )}
