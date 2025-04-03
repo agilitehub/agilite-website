@@ -49,7 +49,7 @@ const RegisterPage = () => {
             <div className="absolute inset-0 animate-glow rounded-lg"></div>
             <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-lg p-6 sm:p-8 relative z-10 border border-white/20 dark:border-gray-700/30">
               <h2 className="text-lg sm:text-xl text-gray-700 dark:text-gray-200 mb-4 sm:mb-6 text-center">
-                Use the form below to register with Agilit-e
+                Use the form below to register with Agilit<span className="text-agilite-red">-e</span>
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">

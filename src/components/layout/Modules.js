@@ -149,7 +149,7 @@ const Modules = () => {
     <section id="modules" className="relative py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Agilit-e Modules</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Agilit<span className="text-agilite-red">-e</span> Modules</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             A comprehensive suite of modules designed to handle every aspect of your integration needs. Each module is built with performance, security, and scalability in mind.
           </p>

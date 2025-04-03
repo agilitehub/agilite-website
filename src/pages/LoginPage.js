@@ -26,7 +26,7 @@ const LoginPage = () => {
           <div className="flex flex-col items-center mb-6 sm:mb-8">
             <Logo size="large" className="mb-4 sm:mb-6 w-32 sm:w-auto" />
             <h1 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white text-center px-2">
-              Welcome to the Agilit-e Portal
+              Welcome to the Agilit<span className="text-agilite-red">-e</span> Portal
             </h1>
           </div>
 

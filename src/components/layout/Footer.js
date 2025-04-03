@@ -17,7 +17,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <Logo className="mb-4" />
+            <Logo className="mb-4" style="accent-e" />
             <p className="text-agilite-slate dark:text-white mb-4">
               Transforming businesses through low-code integration solutions.
             </p>
@@ -115,9 +115,9 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-agilite-grey dark:border-secondary-light">
-          <p className="text-center text-agilite-slate dark:text-white">
-            &copy; {currentYear} Agilit-e. All rights reserved.
-          </p>
+          <div className="mt-8 text-center text-base text-gray-500 dark:text-gray-400">
+            &copy; {currentYear} Agilit<span className="text-agilite-red">-e</span>. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>

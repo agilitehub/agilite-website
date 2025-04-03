@@ -79,7 +79,7 @@ const Team = () => {
       name: 'John Jardin',
       role: 'CEO',
       image: '/images/team/john-jardin.jpg',
-      bio: 'As the CEO of Agilit-e, John is constantly researching and mastering cutting edge integration technologies to help businesses connect their systems and streamline operations.',
+      bio: 'As the CEO of Agilit<span className="text-agilite-red">-e</span>, John is constantly researching and mastering cutting edge integration technologies to help businesses connect their systems and streamline operations.',
       socials: {
         linkedin: 'https://za.linkedin.com/in/johnjardin',
         facebook: 'https://www.facebook.com/john.jardin'
@@ -89,7 +89,7 @@ const Team = () => {
       name: 'Dawid van Heerden',
       role: 'Partner',
       image: '/images/team/dawid-placeholder.jpg',
-      bio: 'Dawid brings extensive expertise in system integration and business process optimization to Agilit-e, working closely with clients to deliver tailored solutions.',
+      bio: 'Dawid brings extensive expertise in system integration and business process optimization to Agilit<span className="text-agilite-red">-e</span>, working closely with clients to deliver tailored solutions.',
       socials: {
         linkedin: 'https://www.linkedin.com/',
       }

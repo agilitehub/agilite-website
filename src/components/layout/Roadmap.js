@@ -105,7 +105,7 @@ const Roadmap = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4">Product Roadmap</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Our vision for the future of Agilit-e. We're constantly working on new features and improvements to make your integration experience even better.
+            Our vision for the future of Agilit<span className="text-agilite-red">-e</span>. We're constantly working on new features and improvements to make your integration experience even better.
           </p>
         </div>
         

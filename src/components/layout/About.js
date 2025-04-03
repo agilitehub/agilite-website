@@ -52,7 +52,7 @@ const About = () => {
       <div className="container relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-agilite-slate dark:text-white mb-4">
-            About Agilit-e
+            About Agilit<span className="text-agilite-red">-e</span>
           </h2>
           <p className="text-xl text-agilite-slate/90 dark:text-gray-200 max-w-3xl mx-auto">
             We are a team of integration experts committed to helping businesses streamline operations and achieve digital transformation.
@@ -65,19 +65,19 @@ const About = () => {
               Our Mission
             </h3>
             <p className="text-agilite-slate/90 dark:text-gray-300 mb-4">
-              Agilit-e, pronounced "agility," is a low-code, agile, integration service portal created to simplify complex system integrations. Our mission is to help businesses overcome integration challenges with elegant, performant solutions.
+              Agilit<span className="text-agilite-red">-e</span>, pronounced "agility," is a low-code, agile, integration service portal created to simplify complex system integrations. Our mission is to help businesses overcome integration challenges with elegant, performant solutions.
             </p>
             <p className="text-agilite-slate/90 dark:text-gray-300 mb-4">
-              We strive for the best in performance, scalability, and security. We continually challenge ourselves to make the Agilit-e framework quicker, better, and more secure.
+              We strive for the best in performance, scalability, and security. We continually challenge ourselves to make the Agilit<span className="text-agilite-red">-e</span> framework quicker, better, and more secure.
             </p>
             <p className="text-agilite-slate/90 dark:text-gray-300 mb-4">
-              With Agilit-e, you can configure API profiles that scale across multiple modules to create custom microservices and integrations between systems—all with minimal coding required.
+              With Agilit<span className="text-agilite-red">-e</span>, you can configure API profiles that scale across multiple modules to create custom microservices and integrations between systems—all with minimal coding required.
             </p>
           </div>
           <div className="order-1 lg:order-2 flex justify-center">
             <div className="bg-white/80 dark:bg-gray-800 p-10 rounded-full shadow-xl">
               <div className="flex items-center justify-center">
-                <Logo className="transform scale-[4]" showText={false} variant="grayscale" />
+                <Logo className="transform scale-[4]" showText={false} variant="grayscale" style="accent-ae" />
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ const About = () => {
                 API-First Design
               </h4>
               <p className="text-agilite-slate/90 dark:text-gray-300">
-                Agilit-e is designed as an API-first solution, based on a microservices architecture and strategy. This approach enables flexible, scalable integrations that can adapt to changing business needs.
+                Agilit<span className="text-agilite-red">-e</span> is designed as an API-first solution, based on a microservices architecture and strategy. This approach enables flexible, scalable integrations that can adapt to changing business needs.
               </p>
             </div>
             <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
@@ -103,7 +103,7 @@ const About = () => {
                 Low-Code Philosophy
               </h4>
               <p className="text-agilite-slate/90 dark:text-gray-300">
-                With almost no technical skills required to get Agilit-e working for you, we've made complex integrations accessible to business users while still providing the power developers need.
+                With almost no technical skills required to get Agilit<span className="text-agilite-red">-e</span> working for you, we've made complex integrations accessible to business users while still providing the power developers need.
               </p>
             </div>
             <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
@@ -111,7 +111,7 @@ const About = () => {
                 Modular Architecture
               </h4>
               <p className="text-agilite-slate/90 dark:text-gray-300">
-                Our series of Agilit-e Modules cater to many application requirements, allowing you to build custom solutions that precisely match your business needs.
+                Our series of Agilit<span className="text-agilite-red">-e</span> Modules cater to many application requirements, allowing you to build custom solutions that precisely match your business needs.
               </p>
             </div>
             <div className="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
@@ -119,7 +119,7 @@ const About = () => {
                 Rapid Implementation
               </h4>
               <p className="text-agilite-slate/90 dark:text-gray-300">
-                Create complex integration flows in minutes with Agilit-e and Node-RED, dramatically reducing development time and accelerating your path to digital transformation.
+                Create complex integration flows in minutes with Agilit<span className="text-agilite-red">-e</span> and Node-RED, dramatically reducing development time and accelerating your path to digital transformation.
               </p>
             </div>
           </div>

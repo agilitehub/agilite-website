@@ -35,6 +35,8 @@ module.exports = {
       animation: {
         'float': 'float 8s ease-in-out infinite',
         'float-delayed': 'float 8s ease-in-out infinite 4s',
+        'float-slow': 'float 12s ease-in-out infinite',
+        'float-reverse': 'float-reverse 10s ease-in-out infinite',
         'spin-slow': 'spin 20s linear infinite',
         'slow-pulse': 'slow-pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'slow-pulse-delay': 'slow-pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite 4s',
@@ -60,6 +62,10 @@ module.exports = {
         'float': {
           '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
           '50%': { transform: 'translate(20px, -20px) scale(1.1)' }
+        },
+        'float-reverse': {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '50%': { transform: 'translate(-20px, -15px) scale(1.05)' }
         },
         'slow-pulse': {
           '0%, 100%': { opacity: 1, transform: 'scale(1)' },

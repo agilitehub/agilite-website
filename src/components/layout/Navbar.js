@@ -247,6 +247,7 @@ const Navbar = () => {
           <Logo 
             showText={true} 
             size={scrolled ? "small" : "medium"}
+            style="accent-e"
           />
         </Link>
         

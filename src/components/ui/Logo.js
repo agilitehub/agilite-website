@@ -5,7 +5,8 @@ const Logo = ({
   textColor = 'text-agilite-slate', 
   showText = true, 
   variant = 'color', // 'color' or 'grayscale'
-  size = 'medium' // 'small', 'medium', 'large'
+  size = 'medium', // 'small', 'medium', 'large'
+  style = 'default' // 'default', 'accent-e', 'accent-ae'
 }) => {
   // Colors based on variant
   const nodeColor = variant === 'color' ? '#E30613' : '#4A545E';
@@ -20,6 +21,9 @@ const Logo = ({
   };
   
   const logoSize = sizeMap[size] || sizeMap.medium;
+  
+  // Determine which style to use (defaulting to 'accent-e')
+  const logoStyle = style || 'accent-e';
   
   return (
     <div className={`flex items-center ${className}`}>
@@ -73,9 +77,26 @@ const Logo = ({
       
       {/* Agilit-e text */}
       {showText && (
-        <span className={`text-3xl font-normal tracking-wider whitespace-nowrap ${textColor} dark:text-white`} style={{ fontFamily: 'Arial, sans-serif' }}>
-          AGILIT-E
-        </span>
+        <div className={`text-3xl font-normal tracking-wider whitespace-nowrap`} style={{ fontFamily: 'Arial, sans-serif' }}>
+          {logoStyle === 'default' && (
+            <span className={`${textColor} dark:text-white`}>AGILIT-E</span>
+          )}
+          
+          {logoStyle === 'accent-e' && (
+            <>
+              <span className={`${textColor} dark:text-white`}>AGILIT</span>
+              <span className="text-agilite-red">-E</span>
+            </>
+          )}
+          
+          {logoStyle === 'accent-ae' && (
+            <>
+              <span className="text-agilite-red">A</span>
+              <span className={`${textColor} dark:text-white`}>GILIT</span>
+              <span className="text-agilite-red">-E</span>
+            </>
+          )}
+        </div>
       )}
     </div>
   );
