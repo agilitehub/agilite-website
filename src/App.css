@@ -42,13 +42,17 @@ body::before {
   display: none !important;
 }
 
-body, #root, nav, header {
+body,
+#root,
+nav,
+header {
   border-top: none !important;
   outline: none !important;
 }
 
 /* Override any hr or divider elements */
-hr, .divider {
+hr,
+.divider {
   display: none !important;
 }
 
