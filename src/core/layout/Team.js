@@ -5,16 +5,14 @@ import BackgroundEffect from '../ui/BackgroundEffect'
 
 const TeamMember = ({ name, role, image, socials, bio }) => {
   return (
-    <div className='flex flex-col items-center bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group'>
-      <div className='relative w-full'>
-        <div className='aspect-w-1 aspect-h-1 w-full'>
-          <img
-            src={image}
-            alt={name}
-            className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
-          />
-        </div>
-        <div className='absolute inset-0 bg-gradient-to-t from-agilite-red/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center'>
+    <div className='group flex h-full flex-col items-center overflow-hidden rounded-lg bg-white shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-xl dark:bg-gray-800'>
+      <div className='relative w-full aspect-square overflow-hidden'>
+        <img
+          src={image}
+          alt={name}
+          className='h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105'
+        />
+        <div className='absolute inset-0 flex items-end justify-center bg-gradient-to-t from-agilite-red/80 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
           <div className='flex space-x-4 mb-6'>
             {socials.linkedin && (
               <a
@@ -76,7 +74,7 @@ const Team = () => {
       name: 'John Jardin',
       role: 'CEO',
       image: '/images/team/john-jardin.jpg',
-      bio: 'As the CEO of Agilit<span className="text-agilite-red">-e</span>, John is constantly researching and mastering cutting edge integration technologies to help businesses connect their systems and streamline operations.',
+      bio: 'As the CEO of Agilit-e, John is constantly researching and mastering cutting edge integration technologies to help businesses connect their systems and streamline operations.',
       socials: {
         linkedin: 'https://za.linkedin.com/in/johnjardin',
         facebook: 'https://www.facebook.com/john.jardin'
@@ -86,7 +84,7 @@ const Team = () => {
       name: 'Dawid van Heerden',
       role: 'Partner',
       image: '/images/team/dawid-placeholder.jpg',
-      bio: 'Dawid brings extensive expertise in system integration and business process optimization to Agilit<span className="text-agilite-red">-e</span>, working closely with clients to deliver tailored solutions.',
+      bio: 'Dawid brings extensive expertise in system integration and business process optimization to Agilit-e, working closely with clients to deliver tailored solutions.',
       socials: {
         linkedin: 'https://www.linkedin.com/'
       }
@@ -100,6 +98,13 @@ const Team = () => {
         linkedin: 'https://www.linkedin.com/',
         github: 'https://github.com/'
       }
+    },
+    {
+      name: 'Marianne Smith',
+      role: 'User Interface Coordinator',
+      image: '/images/team/marianne-placeholder.jpg',
+      bio: 'Marianne coordinates user interface design across Agilit-e products, ensuring polished, accessible experiences that align with client and brand requirements.',
+      socials: {}
     }
   ]
 
@@ -115,7 +120,7 @@ const Team = () => {
           </p>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+        <div className='grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4 max-w-7xl mx-auto'>
           {teamMembers.map((member, index) => (
             <TeamMember
               key={index}

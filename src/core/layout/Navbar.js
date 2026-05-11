@@ -220,12 +220,34 @@ const Navbar = () => {
     })
   }
 
+  const handleHomeClick = (e) => {
+    setActiveSection('home')
+    setIsOpen(false)
+
+    if (location.pathname !== '/') {
+      return
+    }
+
+    e.preventDefault()
+
+    if (location.hash) {
+      navigate('/', { replace: true })
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   const navbarClasses = `
-    fixed w-full z-50 transition-all duration-300 
+    fixed inset-x-0 top-0 z-50 border-b-2 py-3
+    bg-white/95 backdrop-blur-md dark:bg-gray-900/95
+    transition-[background,box-shadow,border-color] duration-300
     ${
       scrolled
-        ? 'bg-gradient-to-r from-white via-white to-agilite-red/5 dark:from-gray-900 dark:via-gray-900 dark:to-agilite-red/10 shadow-lg border-b-2 border-agilite-red/20 dark:border-agilite-red/30 py-2'
-        : 'bg-gradient-to-r from-white via-white to-agilite-red/10 dark:from-gray-900 dark:via-gray-900 dark:to-agilite-red/20 shadow-md border-b-2 border-transparent py-4'
+        ? 'bg-gradient-to-r from-white/95 via-white/95 to-agilite-red/5 dark:from-gray-900/95 dark:via-gray-900/95 dark:to-agilite-red/10 shadow-lg border-agilite-red/20 dark:border-agilite-red/30'
+        : 'bg-gradient-to-r from-white/95 via-white/95 to-agilite-red/10 dark:from-gray-900/95 dark:via-gray-900/95 dark:to-agilite-red/20 shadow-md border-transparent'
     }
   `
 
@@ -249,15 +271,15 @@ const Navbar = () => {
 
   return (
     <nav className={navbarClasses}>
-      <div className='container mx-auto px-4 flex justify-between items-center'>
+      <div className='container mx-auto flex min-h-[5rem] items-center justify-between px-4'>
         {/* Logo */}
-        <Link to='/' className='flex items-center'>
-          <Logo showText={true} size={scrolled ? 'small' : 'medium'} style='accent-e' />
+        <Link to='/' className='flex shrink-0 cursor-default select-none items-center' onClick={handleHomeClick}>
+          <Logo showText={true} size='medium' style='accent-e' />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className='hidden lg:flex lg:ml-16 space-x-8 items-center'>
-          <Link to='/' className={getNavLinkClasses('home')}>
+        <div className='hidden min-w-0 lg:ml-16 lg:flex lg:items-center lg:space-x-8'>
+          <Link to='/' className={getNavLinkClasses('home')} onClick={handleHomeClick}>
             Home
             <span className={getNavLinkBarClasses('home')}></span>
           </Link>
@@ -306,24 +328,28 @@ const Navbar = () => {
         <div className='flex items-center lg:hidden'>
           <ThemeToggle className='mr-4' />
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className='text-gray-800 dark:text-white hover:text-agilite-red dark:hover:text-agilite-red transition-colors duration-300'
+            type='button'
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
+            aria-controls='mobile-navigation'
+            onClick={() => setIsOpen((open) => !open)}
+            className='rounded-md p-2 text-gray-800 transition-colors duration-300 hover:text-agilite-red dark:text-white dark:hover:text-agilite-red'
           >
             <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className='text-xl' />
           </button>
         </div>
       </div>
 
-      {/* Mobile Navigation */}
-      <div
-        className={`
-          lg:hidden absolute top-full left-0 w-full bg-gradient-to-b from-white via-white to-agilite-red/5 dark:from-gray-900 dark:via-gray-900 dark:to-agilite-red/10 shadow-lg border-b-2 border-agilite-red/20 dark:border-agilite-red/30
-          transition-all duration-300 transform overflow-hidden
-          ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}
-        `}
-      >
-        <div className='container mx-auto px-4 py-4 flex flex-col space-y-4'>
-          <Link to='/' className={getNavLinkClasses('home')} onClick={() => setIsOpen(false)}>
+      {isOpen ? (
+        <div
+          id='mobile-navigation'
+          role='dialog'
+          aria-modal='true'
+          aria-label='Mobile navigation'
+          className='absolute left-0 right-0 top-full z-50 max-h-[min(70vh,calc(100vh-6.5rem))] overflow-y-auto border-b-2 border-agilite-red/20 bg-white shadow-lg dark:border-agilite-red/30 dark:bg-gray-900 lg:hidden'
+        >
+          <div className='container mx-auto flex flex-col space-y-4 px-4 py-4'>
+          <Link to='/' className={getNavLinkClasses('home')} onClick={handleHomeClick}>
             Home
             <span className={getNavLinkBarClasses('home')}></span>
           </Link>
@@ -366,8 +392,9 @@ const Navbar = () => {
           >
             Login
           </Link>
+          </div>
         </div>
-      </div>
+      ) : null}
     </nav>
   )
 }
