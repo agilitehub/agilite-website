@@ -12,16 +12,17 @@ const TeamMember = ({ name, role, image, socials, bio }) => {
           alt={name}
           className='h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105'
         />
-        <div className='absolute inset-0 flex items-end justify-center bg-gradient-to-t from-agilite-red/80 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100'>
-          <div className='flex space-x-4 mb-6'>
+        <div className='pointer-events-none absolute inset-0 z-10 flex items-end justify-center bg-gradient-to-t from-agilite-red/80 to-transparent opacity-0 transition-opacity duration-300 group-hover:pointer-events-auto group-hover:opacity-100'>
+          <div className='mb-6 flex space-x-4'>
             {socials.linkedin && (
               <a
                 href={socials.linkedin}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-white hover:text-gray-200 transition-colors'
+                aria-label={`${name} on LinkedIn`}
+                className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-white transition-colors hover:text-gray-200'
               >
-                <FontAwesomeIcon icon={faLinkedin} className='h-6 w-6' />
+                <FontAwesomeIcon icon={faLinkedin} className='h-6 w-6' aria-hidden />
               </a>
             )}
             {socials.facebook && (
@@ -29,9 +30,10 @@ const TeamMember = ({ name, role, image, socials, bio }) => {
                 href={socials.facebook}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-white hover:text-gray-200 transition-colors'
+                aria-label={`${name} on Facebook`}
+                className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-white transition-colors hover:text-gray-200'
               >
-                <FontAwesomeIcon icon={faFacebook} className='h-6 w-6' />
+                <FontAwesomeIcon icon={faFacebook} className='h-6 w-6' aria-hidden />
               </a>
             )}
             {socials.twitter && (
@@ -39,9 +41,10 @@ const TeamMember = ({ name, role, image, socials, bio }) => {
                 href={socials.twitter}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-white hover:text-gray-200 transition-colors'
+                aria-label={`${name} on X`}
+                className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-white transition-colors hover:text-gray-200'
               >
-                <FontAwesomeIcon icon={faTwitter} className='h-6 w-6' />
+                <FontAwesomeIcon icon={faTwitter} className='h-6 w-6' aria-hidden />
               </a>
             )}
             {socials.github && (
@@ -49,9 +52,10 @@ const TeamMember = ({ name, role, image, socials, bio }) => {
                 href={socials.github}
                 target='_blank'
                 rel='noopener noreferrer'
-                className='text-white hover:text-gray-200 transition-colors'
+                aria-label={`${name} on GitHub`}
+                className='inline-flex min-h-11 min-w-11 items-center justify-center rounded-md text-white transition-colors hover:text-gray-200'
               >
-                <FontAwesomeIcon icon={faGithub} className='h-6 w-6' />
+                <FontAwesomeIcon icon={faGithub} className='h-6 w-6' aria-hidden />
               </a>
             )}
           </div>
@@ -76,8 +80,8 @@ const Team = () => {
       image: '/images/team/john-jardin.jpg',
       bio: 'As the CEO of Agilit-e, John is constantly researching and mastering cutting edge integration technologies to help businesses connect their systems and streamline operations.',
       socials: {
-        linkedin: 'https://za.linkedin.com/in/johnjardin',
-        facebook: 'https://www.facebook.com/john.jardin'
+        linkedin: 'https://www.linkedin.com/in/johnjardin/',
+        facebook: 'https://www.facebook.com/john.v.jardin'
       }
     },
     {
@@ -86,7 +90,8 @@ const Team = () => {
       image: '/images/team/dawid-placeholder.jpg',
       bio: 'Dawid brings extensive expertise in system integration and business process optimization to Agilit-e, working closely with clients to deliver tailored solutions.',
       socials: {
-        linkedin: 'https://www.linkedin.com/'
+        linkedin: 'https://www.linkedin.com/in/dawid-vanheerden/',
+        facebook: 'https://www.facebook.com/dawid.van.heerden'
       }
     },
     {
@@ -95,8 +100,8 @@ const Team = () => {
       image: '/images/team/armand-placeholder.jpg',
       bio: 'With deep technical knowledge and years of experience, Armand specializes in creating robust solutions that meet complex business requirements and technical challenges.',
       socials: {
-        linkedin: 'https://www.linkedin.com/',
-        github: 'https://github.com/'
+        linkedin: 'https://www.linkedin.com/in/arriesmit/',
+        facebook: 'https://www.facebook.com/armand.smit.733'
       }
     },
     {
@@ -104,7 +109,10 @@ const Team = () => {
       role: 'User Interface Coordinator',
       image: '/images/team/marianne-placeholder.jpg',
       bio: 'Marianne coordinates user interface design across Agilit-e products, ensuring polished, accessible experiences that align with client and brand requirements.',
-      socials: {}
+      socials: {
+        linkedin: 'https://www.linkedin.com/in/marianne-smith-200580198/',
+        facebook: 'https://www.facebook.com/marianne.smith.355'
+      }
     }
   ]
 

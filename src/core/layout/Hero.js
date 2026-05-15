@@ -69,18 +69,20 @@ const Hero = () => {
                   href={company.href}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='group relative flex h-full w-full flex-col items-center rounded-lg border-2 border-agilite-red/40 bg-white/90 p-4 shadow-sm transition-all duration-300 hover:border-agilite-red hover:bg-gradient-to-br hover:from-gray-50 hover:to-white hover:shadow-md dark:border-agilite-red/55 dark:bg-gray-800/90 dark:hover:from-gray-700 dark:hover:to-gray-800'
+                  className='group relative z-0 flex h-full w-full flex-col items-center rounded-lg border-2 border-agilite-red/40 bg-white/90 p-4 shadow-sm ring-2 ring-transparent transition-all duration-300 hover:z-10 hover:-translate-y-1.5 hover:border-agilite-red hover:bg-gradient-to-br hover:from-white hover:to-gray-50 hover:shadow-xl hover:shadow-[0_14px_32px_-8px_rgba(227,6,19,0.32)] hover:ring-agilite-red/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-agilite-red focus-visible:ring-offset-2 dark:border-agilite-red/55 dark:bg-gray-800/90 dark:hover:border-agilite-red dark:hover:from-gray-700 dark:hover:to-gray-600 dark:hover:shadow-[0_14px_32px_-8px_rgba(227,6,19,0.4)] dark:hover:ring-agilite-red/40'
                 >
-                  <div className='mb-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-agilite-red/20 to-gray-200 transition-all duration-300 group-hover:from-agilite-red/30 group-hover:to-agilite-red/20 dark:from-agilite-red/30 dark:to-agilite-red/20'>
+                  <div className='mb-3 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-agilite-red/20 to-gray-200 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:from-agilite-red/35 group-hover:to-agilite-red/15 group-hover:shadow-md group-hover:shadow-agilite-red/25 dark:from-agilite-red/30 dark:to-agilite-red/20 dark:group-hover:from-agilite-red/50 dark:group-hover:to-agilite-red/25'>
                     <FontAwesomeIcon
                       icon={company.icon}
                       className='transform text-xl text-agilite-red transition-transform duration-300 group-hover:scale-110'
                     />
                   </div>
-                  <span className='mb-2 flex min-h-[3.5rem] flex-1 items-center justify-center text-center text-lg font-semibold leading-tight text-gray-800 transition-colors duration-300 group-hover:text-agilite-red dark:text-white'>
+                  <span className='mb-2 flex min-h-[3.5rem] flex-1 items-center justify-center text-center text-lg font-semibold leading-tight text-gray-800 transition-colors duration-300 group-hover:text-agilite-red dark:text-white dark:group-hover:text-white'>
                     {company.name}
                   </span>
-                  <span className='mt-auto text-center text-sm text-gray-600 dark:text-gray-400'>{company.industry}</span>
+                  <span className='mt-auto text-center text-sm text-gray-600 transition-colors duration-300 group-hover:text-agilite-red/90 dark:text-gray-400 dark:group-hover:text-agilite-red'>
+                    {company.industry}
+                  </span>
                 </a>
               ))}
             </div>

@@ -257,7 +257,7 @@ const Navbar = () => {
       location.pathname === `/${sectionId}` ||
       (location.pathname === '/' && location.hash === `#${sectionId}`)
 
-    return `text-gray-800 dark:text-white hover:text-agilite-red dark:hover:text-agilite-red transition-all duration-300 font-semibold relative group px-2 py-1 ${isActive ? 'text-agilite-red dark:text-agilite-red' : ''}`
+    return `text-sm 2xl:text-base text-gray-800 dark:text-white hover:text-agilite-red dark:hover:text-agilite-red transition-all duration-300 font-semibold relative group whitespace-nowrap px-1.5 py-1 2xl:px-2 ${isActive ? 'text-agilite-red dark:text-agilite-red' : ''}`
   }
 
   const getNavLinkBarClasses = (sectionId) => {
@@ -278,7 +278,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className='hidden min-w-0 lg:ml-16 lg:flex lg:items-center lg:space-x-8'>
+        <div className='hidden min-w-0 xl:ml-10 xl:flex xl:items-center xl:gap-x-4 2xl:ml-16 2xl:gap-x-7'>
           <Link to='/' className={getNavLinkClasses('home')} onClick={handleHomeClick}>
             Home
             <span className={getNavLinkBarClasses('home')}></span>
@@ -317,15 +317,15 @@ const Navbar = () => {
           </Link>
           <Link
             to='/login'
-            className='ml-4 px-5 py-2 bg-agilite-red hover:bg-agilite-red/90 text-white rounded-lg transition-all duration-300 font-semibold shadow-md hover:shadow-lg hover:-translate-y-0.5'
+            className='ml-2 shrink-0 px-4 py-2 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-agilite-red/90 hover:shadow-lg sm:px-5 sm:text-base 2xl:ml-4 bg-agilite-red rounded-lg shadow-md'
           >
             Login
           </Link>
-          <ThemeToggle className='ml-4' />
+          <ThemeToggle className='ml-2 shrink-0 2xl:ml-4' />
         </div>
 
         {/* Mobile menu button */}
-        <div className='flex items-center lg:hidden'>
+        <div className='flex items-center xl:hidden'>
           <ThemeToggle className='mr-4' />
           <button
             type='button'
@@ -346,7 +346,7 @@ const Navbar = () => {
           role='dialog'
           aria-modal='true'
           aria-label='Mobile navigation'
-          className='absolute left-0 right-0 top-full z-50 max-h-[min(70vh,calc(100vh-6.5rem))] overflow-y-auto border-b-2 border-agilite-red/20 bg-white shadow-lg dark:border-agilite-red/30 dark:bg-gray-900 lg:hidden'
+          className='absolute left-0 right-0 top-full z-50 max-h-[min(70vh,calc(100vh-6.5rem))] overflow-y-auto border-b-2 border-agilite-red/20 bg-white shadow-lg dark:border-agilite-red/30 dark:bg-gray-900 xl:hidden'
         >
           <div className='container mx-auto flex flex-col space-y-4 px-4 py-4'>
           <Link to='/' className={getNavLinkClasses('home')} onClick={handleHomeClick}>
