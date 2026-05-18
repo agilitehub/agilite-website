@@ -168,24 +168,24 @@ const NetworkNodes = () => {
 
 const ServiceCard = ({ icon, title, description, index }) => {
   return (
-    <div className='relative group transform transition-transform duration-300 hover:-translate-y-2'>
+    <div className='group relative h-full transform transition-transform duration-300 hover:-translate-y-2'>
       {/* Background gradient with optimized animation */}
-      <div className='absolute inset-0 bg-gradient-to-br from-white/20 to-white/5 rounded-xl transform transition-opacity duration-300 group-hover:opacity-100 opacity-0'></div>
+      <div className='absolute inset-0 rounded-xl bg-gradient-to-br from-white/20 to-white/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100'></div>
 
       {/* Main card */}
-      <div className='relative bg-gradient-to-br from-agilite-red to-red-700 dark:from-agilite-red dark:to-red-800 p-8 rounded-xl border border-red-400/20 dark:border-red-500/20 overflow-hidden shadow-lg'>
+      <div className='relative flex h-full flex-col overflow-hidden rounded-xl border border-red-400/20 bg-gradient-to-br from-agilite-red to-red-700 p-8 shadow-lg dark:border-red-500/20 dark:from-agilite-red dark:to-red-800'>
         {/* Animated corner accent */}
         <div className='absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/20 to-transparent -translate-x-8 -translate-y-8 rounded-full blur-2xl transition-all duration-300 opacity-0 group-hover:opacity-100'></div>
 
         {/* Content container */}
-        <div className='relative'>
+        <div className='relative flex flex-1 flex-col'>
           {/* Icon container */}
           <div className='w-16 h-16 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center mb-6 transform transition-all duration-300 group-hover:scale-110 group-hover:bg-white/20'>
             <FontAwesomeIcon icon={icon} className='text-2xl text-white' />
           </div>
 
           <h3 className='text-xl font-bold text-white mb-4 transition-colors duration-300'>{title}</h3>
-          <p className='text-red-100/90 leading-relaxed'>{description}</p>
+          <p className='flex-1 text-red-100/90 leading-relaxed'>{description}</p>
         </div>
 
         {/* Bottom highlight */}
@@ -262,7 +262,7 @@ const Services = () => {
           </a>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 lg:grid-cols-3'>
           {services.map((service, index) => (
             <ServiceCard
               key={index}

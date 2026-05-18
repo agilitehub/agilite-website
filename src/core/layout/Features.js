@@ -14,14 +14,21 @@ import BackgroundEffect from '../ui/BackgroundEffect'
 
 const FeatureCard = ({ icon, title, description }) => {
   return (
-    <div className='bg-white dark:bg-gray-800 rounded-lg p-8 shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-1 relative group'>
-      <div className='absolute inset-0 bg-gradient-to-tr from-agilite-red/5 to-agilite-slate/5 dark:from-agilite-red/10 dark:to-agilite-slate/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+    <div className='group relative z-0 rounded-lg border-2 border-gray-200/80 bg-white p-8 shadow-lg ring-2 ring-transparent transition-all duration-300 hover:z-10 hover:-translate-y-1.5 hover:border-agilite-red hover:shadow-xl hover:shadow-[0_14px_32px_-8px_rgba(227,6,19,0.3)] hover:ring-agilite-red/30 dark:border-gray-600 dark:bg-gray-800 dark:hover:border-agilite-red dark:hover:shadow-[0_14px_32px_-8px_rgba(227,6,19,0.38)] dark:hover:ring-agilite-red/40'>
+      <div className='pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-tr from-agilite-red/5 to-agilite-slate/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 dark:from-agilite-red/10 dark:to-agilite-slate/10 group-hover:from-agilite-red/15 group-hover:to-agilite-slate/10 dark:group-hover:from-agilite-red/22 dark:group-hover:to-agilite-slate/16'></div>
       <div className='relative z-10'>
-        <div className='w-16 h-16 bg-agilite-red/10 dark:bg-agilite-red/20 rounded-full flex items-center justify-center mb-6'>
-          <FontAwesomeIcon icon={icon} className='h-8 w-8 text-agilite-red' />
+        <div className='mb-6 flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-agilite-red/10 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:bg-agilite-red/20 group-hover:shadow-md group-hover:shadow-agilite-red/25 dark:bg-agilite-red/20 dark:group-hover:bg-agilite-red/30 dark:group-hover:shadow-agilite-red/30'>
+          <FontAwesomeIcon
+            icon={icon}
+            className='h-8 w-8 text-agilite-red transition-transform duration-300 group-hover:scale-110'
+          />
         </div>
-        <h3 className='text-xl font-bold text-agilite-slate dark:text-white mb-4'>{title}</h3>
-        <p className='text-agilite-slate/90 dark:text-gray-300'>{description}</p>
+        <h3 className='mb-4 text-xl font-bold text-agilite-slate transition-colors duration-300 group-hover:text-agilite-red dark:text-white dark:group-hover:text-agilite-red'>
+          {title}
+        </h3>
+        <p className='text-agilite-slate/90 transition-colors duration-300 group-hover:text-agilite-slate dark:text-gray-300 dark:group-hover:text-gray-100'>
+          {description}
+        </p>
       </div>
     </div>
   )

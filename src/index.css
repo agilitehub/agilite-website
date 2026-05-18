@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-padding-top: 6.5rem;
+  }
+
+  section[id] {
+    scroll-margin-top: 6.5rem;
+  }
+
   body {
     @apply bg-white text-agilite-slate transition-colors duration-200;
     background-image: linear-gradient(

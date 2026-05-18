@@ -1,4 +1,6 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons'
 import { useTheme } from '../../context/ThemeContext'
 
 const ThemeToggle = ({ className = '' }) => {
@@ -52,46 +54,22 @@ const ThemeToggle = ({ className = '' }) => {
         </div>
       </div>
 
-      {/* Toggle Legends */}
-      <div className='absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-2 text-[8px] font-bold'>
-        <span className={`text-white transition-opacity duration-300 ${darkMode ? 'opacity-0' : 'opacity-100'}`}>
-          ON
-        </span>
-        <span className={`text-white transition-opacity duration-300 ${darkMode ? 'opacity-100' : 'opacity-0'}`}>
-          OFF
-        </span>
-      </div>
-
       {/* Toggle Handle */}
       <div
-        className={`relative z-10 w-6 h-6 rounded-full shadow-md transform transition-all duration-300 flex items-center justify-center ${
+        className={`relative z-10 flex h-6 w-6 items-center justify-center rounded-full shadow-md transition-all duration-300 ${
           darkMode ? 'bg-agilite-red' : 'bg-white'
         }`}
       >
-        {/* Sun Icon - Light Mode */}
-        <div
-          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${darkMode ? 'opacity-0' : 'opacity-100'}`}
-        >
-          <div className='w-3 h-3 bg-agilite-red rounded-full'></div>
-          {[...Array(8)].map((_, i) => (
-            <div
-              key={i}
-              className='absolute w-0.5 h-1.5 bg-agilite-red'
-              style={{
-                transformOrigin: 'center center',
-                transform: `rotate(${i * 45}deg) translateY(-3px)`
-              }}
-            ></div>
-          ))}
-        </div>
-
-        {/* Moon Icon - Dark Mode */}
-        <div
-          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${darkMode ? 'opacity-100' : 'opacity-0'}`}
-        >
-          <div className='w-3.5 h-3.5 bg-white rounded-full'></div>
-          <div className='absolute top-1 right-1.5 w-2 h-2 bg-agilite-red rounded-full'></div>
-        </div>
+        <FontAwesomeIcon
+          icon={faSun}
+          className={`absolute text-sm text-agilite-red transition-opacity duration-300 ${darkMode ? 'opacity-0' : 'opacity-100'}`}
+          aria-hidden='true'
+        />
+        <FontAwesomeIcon
+          icon={faMoon}
+          className={`absolute text-sm text-white transition-opacity duration-300 ${darkMode ? 'opacity-100' : 'opacity-0'}`}
+          aria-hidden='true'
+        />
       </div>
     </button>
   )

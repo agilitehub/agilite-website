@@ -15,9 +15,9 @@ const Logo = ({
 
   // Size mapping
   const sizeMap = {
-    small: 'h-10 w-10',
-    medium: 'h-16 w-16',
-    large: 'h-24 w-24'
+    small: 'h-9 w-9 sm:h-10 sm:w-10',
+    medium: 'h-12 w-12 sm:h-16 sm:w-16',
+    large: 'h-20 w-20 sm:h-24 sm:w-24'
   }
 
   const logoSize = sizeMap[size] || sizeMap.medium
@@ -28,7 +28,7 @@ const Logo = ({
   return (
     <div className={`flex items-center ${className}`}>
       {/* 3D Network nodes logo */}
-      <div className={`relative ${logoSize} mr-8`} aria-hidden='true'>
+      <div className={`relative ${logoSize} mr-3 sm:mr-8`} aria-hidden='true'>
         {/* Shadow effect */}
         <div className='absolute bottom-[-8px] left-1/4 w-1/2 h-[3px] bg-gray-300/50 dark:bg-gray-700/50 rounded-full blur-sm'></div>
 
@@ -74,7 +74,7 @@ const Logo = ({
       {/* Agilit-e text */}
       {showText && (
         <div
-          className={`text-3xl font-normal tracking-wider whitespace-nowrap`}
+          className='whitespace-nowrap text-2xl font-normal tracking-wider sm:text-3xl'
           style={{ fontFamily: 'Arial, sans-serif' }}
         >
           {logoStyle === 'default' && <span className={`${textColor} dark:text-white`}>AGILIT-E</span>}

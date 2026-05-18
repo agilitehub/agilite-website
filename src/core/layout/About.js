@@ -42,7 +42,7 @@ const About = () => {
   ]
 
   return (
-    <section id='about' className='py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden'>
+    <section id='about' className='relative bg-gray-50 py-20 dark:bg-gray-900'>
       <BackgroundEffect />
 
       <div className='container relative z-10'>
@@ -77,7 +77,12 @@ const About = () => {
           <div className='order-1 lg:order-2 flex justify-center'>
             <div className='bg-white/80 dark:bg-gray-800 p-10 rounded-full shadow-xl'>
               <div className='flex items-center justify-center'>
-                <Logo className='transform scale-[4]' showText={false} variant='grayscale' style='accent-ae' />
+                <Logo
+                  className='origin-center scale-[2.25] transform sm:scale-[3] md:scale-[3.5] lg:scale-[4]'
+                  showText={false}
+                  variant='grayscale'
+                  style='accent-ae'
+                />
               </div>
             </div>
           </div>
